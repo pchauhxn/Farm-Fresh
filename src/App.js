@@ -4,15 +4,17 @@ import Nav from './components/Nav';
 import Main from "./components/Main";
 import Login from "./components/Login"
 import Register from "./components/Register"
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
+        <Nav></Nav>
     <Main></Main>
-
-   <Nav></Nav>
    <Login></Login>
     <Register></Register>
-    </div>
+</div>
+
   );
 }
 
