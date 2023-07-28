@@ -4,30 +4,3 @@
 }
 
 
-
-<<<<<<< HEAD
-=======
-.App-header {
- 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
->>>>>>> cf4bee5e902ae2e563fc23e813a498a3e6c71d20
