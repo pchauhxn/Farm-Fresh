@@ -1,33 +1,49 @@
 import React from 'react'
 import styled from "styled-components";
-const Login = () => {
-    return (
-        <Wrapper className="section"> 
-            <div className="wrapper">
-                <div className="title">
-                    Login Form
-                </div>
-                <form action="#">
-                    <div className="field">
-                        <input type="text" required/>
-                            <label>Email Address</label>
-                    </div>
-                    <div className="field">
-                        <input type="password" required/>
-                            <label>Password</label>
-                    </div>
-                    <div className="field">
-                        <input type="submit" value="Login"/>
-                    </div>
-                    <div className="signup-link">
-                        Not a member? <a href="register.html">Signup now</a>
-                    </div>
-                </form>
-            </div>
-        </Wrapper>
-    );
-};
 
+const Register = () => {
+  return (
+    <Wrapper className="section">
+      <div className="shad">
+        <div className="wrapper">
+            <div className="title">
+                Register Now!
+            </div>
+            <form action="#">
+                <div className="field">
+                    <input type="text" required/>
+                    <label>First Name</label>
+                </div>
+                <div className="field">
+                    <input type="text" required/>
+                    <label>Last Name</label>
+                </div>
+                <div className="field">
+                    <input type="text" required/>
+                    <label>Email Address</label>
+                </div>
+                <div className="field">
+                    <input type="password" required/>
+                    <label>Create Password</label>
+                </div>
+                <div className="field">
+                    <input type="password" required/>
+                    <label>Confirm Password</label>
+                </div>
+                <div className="field">
+                    <input type="text" required/>
+                    <label>Phone Number</label>
+                </div>
+
+                <div className="field">
+                    <input type="submit" value="Register"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    </Wrapper>
+  );
+};
 const Wrapper= styled.section`
 .wrapper{
     box-shadow: 10px 10px black;
@@ -120,4 +136,4 @@ const Wrapper= styled.section`
   }
 `;
 
-export default Login
+export default Register
