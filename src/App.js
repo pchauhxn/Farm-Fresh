@@ -6,25 +6,33 @@ import About from "./components/About";
 import { NavLink } from 'react-router-dom';
 import Login from "./components/Login"
 import Register from "./components/Register"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
-      
       <Router>
-      <Nav></Nav>
-      <About></About>
-      <Main></Main>
-      
-     
-                </Router>
-   
-</div>
-
+        <div>
+          <Nav/>  
+          <Routes>
+          <Route path="/" element={<DefaultComponents />} />
+          <Route path="/login" Component={Login} />
+          <Route path="/register" Component={Register} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
 
   );
 }
 
+const DefaultComponents = () => {
+  return (
+    <div>
+      <About />
+      <Main />
+    </div>
+  );
+};
 export default App;

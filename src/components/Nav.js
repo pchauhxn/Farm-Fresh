@@ -1,28 +1,34 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Login from "./Login"
 import Register from "./Register"
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const Nav = () => {
 
-     
+
   return (
-    
-   <Wrapper className="section">
-<nav class="navbar navbar-expand-lg navbar-light ">
-        <a class="navbar-brand" href="homepage.html"><span class="material-symbols-outlined">
+
+    <Wrapper className="section">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <Link to="/">
+          <a class="navbar-brand" href="homepage.html"><span class="material-symbols-outlined">
             agriculture
-            </span>FarmFresh</a>
+          </span>FarmFresh</a>
+        </Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="web.html">Home</a>
+              <Link to="/">
+                <a class="nav-link" href="web.html">
+                  Home
+                </a>
+              </Link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Shop</a>
@@ -38,22 +44,21 @@ const Nav = () => {
                 <a class="dropdown-item" href="#">Other</a>
               </div>
             </li>
-           
+
           </ul>
           <form class="form-inline my-2 my-lg-0">
-          <NavLink to="/Login">
-                Shop Now
-             </NavLink>
-          
-            <button class="btn my-2 my-sm-0 mr-4" type="submit" id="btn-navbar"><a >Login</a></button>
-            <button class="btn  my-2 my-sm-0" type="submit" id="btn-navbar"><a href="ContactUs.html">Contact</a></button>
+            <Link to="/login">
+              <button class="btn my-2 my-sm-0 mr-4" type="submit" id="btn-navbar"><a href="login.html">Login</a></button>
+            </Link>
+            <Link to="/Contactus">
+              <button class="btn  my-2 my-sm-0" type="submit" id="btn-navbar"><a href="ContactUs.html">Contact</a></button>
+            </Link>
           </form>
         </div>
       </nav>
+    </Wrapper>
 
-      </Wrapper>
-     
-    
+
   );
 };
 
