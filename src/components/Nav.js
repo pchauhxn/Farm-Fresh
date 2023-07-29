@@ -1,11 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from "./Login"
+import Register from "./Register"
 
 const Nav = () => {
 
      
   return (
+    
    <Wrapper className="section">
 <nav class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand" href="homepage.html"><span class="material-symbols-outlined">
@@ -37,12 +41,19 @@ const Nav = () => {
            
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <button class="btn my-2 my-sm-0 mr-4" type="submit" id="btn-navbar"><a href="login.html">Login</a></button>
+          <NavLink to="/Login">
+                Shop Now
+             </NavLink>
+          
+            <button class="btn my-2 my-sm-0 mr-4" type="submit" id="btn-navbar"><a >Login</a></button>
             <button class="btn  my-2 my-sm-0" type="submit" id="btn-navbar"><a href="ContactUs.html">Contact</a></button>
           </form>
         </div>
       </nav>
+
       </Wrapper>
+     
+    
   );
 };
 
@@ -50,28 +61,28 @@ const Wrapper = styled.section`
 
 nav{
 
-    background-color: #7da594;
+    background-color: #446e35;
   
   }
 
 .dropdown-menu
 {
-  opacity: 0.5;
+  opacity: 0.8;
   color: black;
-  background-color:  rgb(55, 97, 55);
+  background-color:  #446e35;
 }
 .dropdown-menu a{
   
-  color: rgb(255, 244, 244);
+  color: black;
 }
 #btn-navbar{
 
-    border: 1px solid  #96c4b1;
-    background-color: #96c4b1;
+    border: 1px solid  #3a5d28;;
+    background-color: #3a5d28;;
 }
 
 #btn-navbar:hover{
-    background-color: #cfe6dc;
+    background-color: #446e35;
 }
 
 #btn-navbar a{
