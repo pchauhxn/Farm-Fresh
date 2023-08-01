@@ -1,56 +1,101 @@
 import React from 'react'
 import styled from "styled-components";
-
+import { useState } from 'react';
 const Register = () => {
-  return (
-    <Wrapper className="section">
-      <div className="shad">
-        <div className="wrapper">
-            <div className="title">
-                Register Now!
-            </div>
-            <form action="#">
-                <div className="field">
-                    <input type="text" required/>
-                    <label>First Name</label>
-                </div>
-                <div className="field">
-                    <input type="text" required/>
-                    <label>Last Name</label>
-                </div>
-                <div className="field">
-                    <input type="text" required/>
-                    <label>Email Address</label>
-                </div>
-                <div className="field">
-                    <input type="password" required/>
-                    <label>Create Password</label>
-                </div>
-                <div className="field">
-                    <input type="password" required/>
-                    <label>Confirm Password</label>
-                </div>
-                <div className="field">
-                    <input type="text" required/>
-                    <label>Phone Number</label>
-                </div>
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
 
-                <div className="field">
-                    <input type="submit" value="Register"/>
-                </div>
-            </form>
-        </div>
-    </div>
-    </Wrapper>
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (!firstName || !lastName || !email || !password || !confirmPassword || !phoneNumber) {
+            alert('Please fill in all the required fields.');
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            alert('Invalid email address.');
+            return;
+        }
+        if (!isValidPhoneNumber(phoneNumber)) {
+          alert('Invalid phone number. Please enter a 10-digit number.');
+          return;
+      }
+        console.log('Form submitted:', firstName, lastName, email, password, phoneNumber);
+    };
+
+    const isValidEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+    const isValidPhoneNumber = (phoneNumber) => {
+      const phoneRegex = /^\d{10}$/;
+      return phoneRegex.test(phoneNumber);
+  };
+
+    return (
+      <Wrapper className="section">
+          <div className="shad">
+              <div className="wrapper">
+                  <div className="title">
+                      Register Now!
+                  </div>
+                  <form onSubmit={handleSubmit}>
+                      <div className="field">
+                          <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required/>
+                          <label>First Name</label>
+                      </div>
+                      <div className="field">
+                          <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} required/>
+                          <label>Last Name</label>
+                      </div>
+                      <div className="field">
+                          <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                          <label>Email Address</label>
+                      </div>
+                      <div className="field">
+                          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                          <label>Create Password</label>
+                      </div>
+                      <div className="field">
+                          <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required/>
+                          <label>Confirm Password</label>
+                      </div>
+                      <div className="field">
+                          <input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required/>
+                          <label>Phone Number</label>
+                      </div>
+
+                      <div className="field">
+                          <input type="submit" value="Register"/>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </Wrapper>
   );
 };
 const Wrapper= styled.section`
+padding: 12rem 0;
+img {
+ width: 18rem;
+  height: 15rem;
+}
 .wrapper{
     box-shadow: 10px 10px black;
-    margin-top: 100px;
-    margin-left: 700px;
+    margin-top: -91px;
+    margin-left: 401px;
     width: 500px;
-    background: #fff;
+    background: #d1eadf;
     border-radius: 15px;
     box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
   }
@@ -62,7 +107,7 @@ const Wrapper= styled.section`
     color: #fff;
     user-select: none;
     border-radius: 15px 15px 0 0;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #02201c, #0ae09d);
   }
   .wrapper form{
     padding: 10px 30px 50px 30px;
@@ -114,7 +159,7 @@ const Wrapper= styled.section`
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #02201c, #0ae09d);
     transition: all 0.3s ease;
   }
   form .field input[type="submit"]:active{
@@ -134,6 +179,13 @@ const Wrapper= styled.section`
   form .signup-link a:hover{
     text-decoration: underline;
   }
+  background-image:
+  url(
+"images/wepik-export-20230729073329A68i.png");
+background-repeat:no-repeat;
+background-size: "cover";
+
+}
 `;
 
 export default Register
