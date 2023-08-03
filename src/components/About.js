@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const About = () => {
                 <p>Enjoy a wonderful experience with fresh Organic Veggies for a healthy lifestyle.<br/>
                     Eat farm-fresh veggies&Foods that have extraordinary flavours<br/> to make your life healthier for today and in future. </p>
              <NavLink to="/">
-                <button>Shop Now</button>
+                <button className='shop'style={{borderRadius:'5%'}}>SHOP NOW</button>
              </NavLink>
             </div>
             <div className="hero-section-image">
@@ -27,6 +27,9 @@ const About = () => {
         </div>
      </div>
      </section>
+
+    
+
         </Wrapper>
       
     </div>
@@ -35,6 +38,17 @@ const About = () => {
 
 
 const Wrapper = styled.section`
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+
 padding: 12rem 0;
 img {
  width: 18rem;
@@ -89,6 +103,40 @@ background-repeat:no-repeat;
 background-size: "cover";
 
 }
+
+button {
+  padding: 10px 25px;
+  background-color: #8db2c0;
+  border: none;
+  font-weight: 590;
+  border-radius:5%;
+  
+  
+}
+button:hover{
+  background-color: #8f9da1;
+}
+
+
+.carousel {
+	margin-top: 8%;
+}
+.carousel-cell {
+	width: 66%;
+	height: 500px;
+	margin-right: 10px;
+	border-radius: 15px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+.carousel-cell:before {
+	display: block;
+	content: '';
+}
+
+
+
 `;
 
 export default About

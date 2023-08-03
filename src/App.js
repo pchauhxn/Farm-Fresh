@@ -3,12 +3,26 @@ import './App.css';
 import Nav from './components/Nav';
 import Main from "./components/Main";
 import About from "./components/About";
+import Item from "./components/Item";
 import { NavLink } from 'react-router-dom';
 import Login from "./components/Login"
 import Register from "./components/Register"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import Carousel from "react-elastic-carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import image from './image/carousel.gif';
+import image2 from './image/carousel2.gif';
+import image3 from './image/carousel3.gif';
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 2 },
+];
+
 function App() {
   return (
     <div className="App">
@@ -31,6 +45,13 @@ const DefaultComponents = () => {
   return (
     <div>
       <About />
+      <Carousel breakPoints={breakPoints} style={{backgroundColor:'rgb(209, 224, 219)'}}>
+      <Item icon={image}></Item>
+      
+      <Item icon={image2}></Item>
+      <Item icon={image3}></Item>
+        
+        </Carousel>
       <Main />
     </div>
   );

@@ -107,7 +107,7 @@ img {
     color: #fff;
     user-select: none;
     border-radius: 15px 15px 0 0;
-    background: linear-gradient(-135deg, #02201c, #0ae09d);
+    background: linear-gradient(-135deg, #02201c, #125212);
   }
   .wrapper form{
     padding: 10px 30px 50px 30px;
@@ -159,7 +159,7 @@ img {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    background: linear-gradient(-135deg, #02201c, #0ae09d);
+    background: linear-gradient(-135deg, #02201c, #125212);
     transition: all 0.3s ease;
   }
   form .field input[type="submit"]:active{
