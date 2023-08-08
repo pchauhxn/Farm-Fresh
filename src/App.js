@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom';
 import Login from "./components/Login"
 import Register from "./components/Register"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Contactus from "./components/Contactus";
 import Carousel from "react-elastic-carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<DefaultComponents />} />
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
+          <Route path="/contactus" Component={Contactus} />
           </Routes>
         </div>
       </Router>
