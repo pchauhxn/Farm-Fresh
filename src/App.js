@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import image from './image/carousel.gif';
 import image2 from './image/carousel2.gif';
 import image3 from './image/carousel3.gif';
+import Images3 from "./components/Images3";
 
 import Shop from "./components/Shop";
 import Product_Sidebar from "./components/Product/Product_Sidebar";
@@ -58,6 +59,7 @@ const DefaultComponents = () => {
       <Item icon={image2}></Item>
       <Item icon={image3}></Item>
         </Carousel>
+        <Images3></Images3>
       <Main />
     </div>
   );
