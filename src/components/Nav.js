@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import Login from "./Login"
 import Register from "./Register"
+import Product_Sidebar from './Product/Product_Sidebar';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const Nav = () => {
 
@@ -31,7 +32,9 @@ const Nav = () => {
               </Link>
             </li>
             <li class="nav-item">
+            <Link to="/Shop">
               <a class="nav-link" href="#" style={{color : 'white'}}>Shop</a>
+              </Link>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color : 'white'}}>
@@ -50,7 +53,7 @@ const Nav = () => {
             <Link to="/login">
               <button class="btn my-2 my-sm-0 mr-4" type="submit" id="btn-navbar"><a href="login.html">Login</a></button>
             </Link>
-            <Link to="/Contactus">
+            <Link to="/contactus">
               <button class="btn  my-2 my-sm-0" type="submit" id="btn-navbar"><a href="ContactUs.html">Contact</a></button>
             </Link>
             <Link to="/">

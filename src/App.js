@@ -17,6 +17,9 @@ import image from './image/carousel.gif';
 import image2 from './image/carousel2.gif';
 import image3 from './image/carousel3.gif';
 
+import Shop from "./components/Shop";
+import Product_Sidebar from "./components/Product/Product_Sidebar";
+
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -35,6 +38,8 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path="/contactus" Component={Contactus} />
+          <Route path="/shop" Component={Shop} />
+          <Route path="/product" Component={Product_Sidebar} />
           </Routes>
         </div>
       </Router>
@@ -47,12 +52,11 @@ const DefaultComponents = () => {
   return (
     <div>
       <About />
+      
       <Carousel breakPoints={breakPoints} style={{backgroundColor:'rgb(209, 224, 219)'}}>
       <Item icon={image}></Item>
-      
       <Item icon={image2}></Item>
       <Item icon={image3}></Item>
-        
         </Carousel>
       <Main />
     </div>
