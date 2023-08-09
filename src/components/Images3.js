@@ -244,11 +244,13 @@ footer {
 
 #features{
   font-size:40px;
+  color: #3a5d28;
 }
 
 #para{
   margin-top: 50px;
   font-size:40px;
+  color: #3a5d28;
 }
 
 #allbtn{
