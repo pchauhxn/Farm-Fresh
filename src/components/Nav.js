@@ -41,10 +41,16 @@ const Nav = () => {
                 New Arrival
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Vegetables</a>
+              <Link to="/vegetable">
+                 <a class="dropdown-item" href="#">Vegetables</a>
+              </Link>
+              <Link to="/fruit">
                 <a class="dropdown-item" href="#">Fruits</a>
+                </Link>
                 <div class="dropdown-divider"></div>
+                <Link to="/dairy">
                 <a class="dropdown-item" href="#">Other</a>
+                </Link>
               </div>
             </li>
 
