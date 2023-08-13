@@ -50,10 +50,12 @@ return (
       </div>
 
       <div className='category'>
+      <Link to="/vegetable">
                        <button id="all">
                         <img src={img2}></img>
                         <h2>Vegetable</h2>
                        </button>
+      </Link>
       </div>
 
       <div className='category'>
