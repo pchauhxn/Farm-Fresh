@@ -24,6 +24,7 @@ import AllProduct from "./components/AllProduct";
 import Fruit from "./components/Fruit";
 import Vegetable from "./components/Vegetable";
 import Dairy from "./components/Dairy";
+import Exotic from "./components/Exotic";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -49,6 +50,7 @@ function App() {
           <Route path="/vegetable" Component={Vegetable} />
           <Route path="/fruit" Component={Fruit} />
           <Route path="/dairy" Component={Dairy} />
+          <Route path="/exotic" Component={Exotic} />
           </Routes>
         </div>
       </Router>

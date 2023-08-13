@@ -77,10 +77,12 @@ return (
       </div>
 
       <div className='category'>
+      <Link to="/exotic">
                        <button>
                         <img src={img4}></img>
                         <h2>Exotic Fruits</h2>
                        </button>
+       </Link>
       </div>
 
      
