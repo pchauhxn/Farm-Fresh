@@ -106,7 +106,7 @@ background-size: "cover";
 
 button {
   padding: 10px 25px;
-  background-color: #8db2c0;
+  background-color: #a5c4b4;
   border: none;
   font-weight: 590;
   border-radius:5%;

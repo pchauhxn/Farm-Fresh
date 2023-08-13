@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
-
+import img9 from '../../src/components/Assests/mushroom2.jpg'
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   return (
@@ -43,36 +44,78 @@ const Main = () => {
   
       <div className="grid-container"  id="aha">
         <div className="grid-item">
+          
           <img src="https://grocery-store-react.netlify.app/image/product-6.png" alt="Tomato"/>
           <h3>Fresh Avocado</h3>
+          <Link to="/fruit">
+          <button>
+          <h2>50% off</h2>
+          </button>
+          </Link>
+          
         </div>
         <div className="grid-item">
           <img src="https://grocery-store-react.netlify.app/image/product-1.png" alt="Broccoli"/>
           <h3>Fresh Orange</h3>
+          <Link to="/fruit">
+          <button>
+          <h2>28% off</h2>
+          </button>
+          </Link>
         </div>
         <div className="grid-item">
-          <img src="https://img.freepik.com/premium-vector/red-mushrooms_1268-12444.jpg?size=626&ext=jpg&ga=GA1.2.725962523.1691603831&semt=sph" alt="Spinach"/>
+          <img src={img9} alt="Spinach"/>
           <h3>Fresh Mushroom</h3>
+          <Link to="/vegetable">
+          <button style={{marginTop:'50px'}}>
+          <h2>12% off</h2>
+          </button>
+          </Link>
         </div>
         <div className="grid-item">
           <img src="https://grocery-store-react.netlify.app/image/product-7.png" alt="Carrots"/>
           <h3>Fresh Carrots</h3>
+          <Link to="/vegetable">
+          <button>
+          <h2>12% off</h2>
+          </button>
+          </Link>
         </div>
         <div className="grid-item">
           <img src="https://grocery-store-react.netlify.app/image/product-8.png" alt="Cucumber"/>
           <h3>Fresh Lemon</h3>
+          <Link to="/fruit">
+          <button>
+          <h2>23% off</h2>
+          </button>
+          </Link>
         </div>
         <div className="grid-item">
           <img src="https://grocery-store-react.netlify.app/image/product-5.png" alt="Onions"/>
           <h3>Fresh Potato</h3>
+          <Link to="/vegetable">
+          <button>
+          <h2>4% off</h2>
+          </button>
+          </Link>
         </div>
         <div className="grid-item">
           <img src="https://img.freepik.com/premium-photo/ripe-sweet-ear-corn-isolated_531456-145.jpg?size=626&ext=jpg&ga=GA1.2.725962523.1691603831&semt=sph" alt="Onions"/>
           <h3>Fresh Corn</h3>
+          <Link to="/vegetable">
+          <button  style={{marginTop:'50px'}}>
+          <h2>5% off</h2>
+          </button>
+          </Link>
         </div>
         <div className="grid-item">
           <img src="https://img.freepik.com/premium-photo/fresh-pineapple-white-background_116067-2716.jpg?size=626&ext=jpg&ga=GA1.2.725962523.1691603831&semt=sph" alt="Onions"/>
           <h3>Fresh Pineapple</h3>
+          <Link to="/fruit">
+          <button>
+          <h2>24% off</h2>
+          </button>
+          </Link>
         </div>
       </div>
     </section>
@@ -262,6 +305,15 @@ footer {
 #aha{
   margin:auto;
 }
+
+button{
+  background-color: #a7c0b3;
+  border:none;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom:2px;
+}
+
 
 `;
 

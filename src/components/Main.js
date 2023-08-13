@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
+
 
 
 const Main = () => {
@@ -89,10 +91,10 @@ const Main = () => {
       <div className="footer-links">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Fruits</a></li>
-          <li><a href="#">Vegetables</a></li>
+          <Link to="/fruit"><li>Fruits</li></Link>
+          <Link to="/vegetable"> <li><a href="#">Vegetables</a></li></Link>
           <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <Link to="/contactus"> <li><a href="#">Contact</a></li></Link>
         </ul>
       </div>
       <div className="footer-buttons">
