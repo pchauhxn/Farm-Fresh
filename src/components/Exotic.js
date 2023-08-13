@@ -7,15 +7,13 @@ import img3 from '../../src/components/Assests/pomegranate (1).jpg'
 import img4 from '../../src/components/Assests/star fruit (1).jpg'
 import img5 from '../../src/components/Assests/Rambutan (2).jpg'
 import img6 from '../../src/components/Assests/durian (1).jpg'
-<<<<<<< Updated upstream
 import img7 from '../../src/components/Assests/longan.jpg'
 import img8 from '../../src/components/Assests/mangosteen.png'
 import img9 from '../../src/components/Assests/sapodilla.jpg'
 import img10 from '../../src/components/Assests/Jack Fruit.jpg'
 import img11 from '../../src/components/Assests/sugarapple.png'
 import img12 from '../../src/components/Assests/persimmon-removebg-preview.png'
-=======
->>>>>>> Stashed changes
+
 
 import CategorySidebar from './CategorySidebar';
 
@@ -72,7 +70,7 @@ const Exotic = () => {
       counttype : '1 kg',
       discountprecent : 3
     },
-<<<<<<< Updated upstream
+
     {
         id:7,
         productimage: img7,
@@ -122,18 +120,12 @@ const Exotic = () => {
      counttype : '1 kg',
      discountprecent : 3
    },
-=======
->>>>>>> Stashed changes
   ]
   return (
     <Wrapper className="section">
      <CategorySidebar></CategorySidebar>
     <div className='allproducts'>
-<<<<<<< Updated upstream
     <h1>Exotix Fruits</h1>
-=======
-    <h1>All Products</h1>
->>>>>>> Stashed changes
     <div className='products'>
         {
             products.map((item,index) => {
