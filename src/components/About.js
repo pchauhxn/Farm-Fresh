@@ -17,7 +17,7 @@ const About = () => {
                 <h1>Farm Fresh</h1>
                 <p>Enjoy a wonderful experience with fresh Organic Veggies for a healthy lifestyle.<br/>
                     Eat farm-fresh veggies&Foods that have extraordinary flavours<br/> to make your life healthier for today and in future. </p>
-             <NavLink to="/">
+             <NavLink to="/shop">
                 <button className='shop'style={{borderRadius:'5%'}}>SHOP NOW</button>
              </NavLink>
             </div>

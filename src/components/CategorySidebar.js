@@ -57,10 +57,12 @@ return (
       </div>
 
       <div className='category'>
-                       <button>
+      <Link to="/fruit">
+                       <button >
                         <img src={img3}></img>
                         <h2>Fruits</h2>
                        </button>
+        </Link>
       </div>
 
       <div className='category'>
@@ -156,6 +158,9 @@ const Wrapper = styled.section`
   border:none;
   background:none;
   color:black;
+
+  position:relative;
+ 
 
   
  

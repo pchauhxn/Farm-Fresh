@@ -7,7 +7,6 @@ const shop = () => {
     
       <div className='product_sidebar'>
              
-        
         <AllProduct></AllProduct> 
     </div>
    

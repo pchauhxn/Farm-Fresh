@@ -21,6 +21,7 @@ import Images3 from "./components/Images3";
 import Shop from "./components/Shop";
 import Product_Sidebar from "./components/Product/Product_Sidebar";
 import AllProduct from "./components/AllProduct";
+import Fruit from "./components/Fruit";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -43,6 +44,7 @@ function App() {
           <Route path="/shop" Component={Shop} />
           <Route path="/product" Component={Product_Sidebar} />
           <Route path="/allproduct" Component={AllProduct} />
+          <Route path="/fruit" Component={Fruit} />
           </Routes>
         </div>
       </Router>
