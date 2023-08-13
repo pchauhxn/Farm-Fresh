@@ -23,7 +23,10 @@ import Product_Sidebar from "./components/Product/Product_Sidebar";
 import AllProduct from "./components/AllProduct";
 import Fruit from "./components/Fruit";
 import Vegetable from "./components/Vegetable";
+<<<<<<< Updated upstream
 import Dairy from "./components/Dairy";
+=======
+>>>>>>> Stashed changes
 import Exotic from "./components/Exotic";
 
 const breakPoints = [
@@ -48,8 +51,11 @@ function App() {
           <Route path="/product" Component={Product_Sidebar} />
           <Route path="/allproduct" Component={AllProduct} />
           <Route path="/vegetable" Component={Vegetable} />
+<<<<<<< Updated upstream
           <Route path="/fruit" Component={Fruit} />
           <Route path="/dairy" Component={Dairy} />
+=======
+>>>>>>> Stashed changes
           <Route path="/exotic" Component={Exotic} />
           </Routes>
         </div>

@@ -50,7 +50,7 @@ const Vegetable = () => {
       productname: 'Brinjal',
       productprice : 20,
       counttype : '1 kg',
-      discountprecent : 5
+      discountprecent : 4
     },
     {
       id:5,
