@@ -1,4 +1,9 @@
 
+:root {
+  --col1: #7ED957;
+  --col2: gray;
+  --col3: #cecece;
+}
 .App {
   margin:0;box-sizing:border-box;
   font-family: 'Poppins', sans-serif;  

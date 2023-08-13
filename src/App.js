@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import image from './image/carousel.gif';
 import image2 from './image/carousel2.gif';
 import image3 from './image/carousel3.gif';
+import Cart from "./components/Cart";
 import Images3 from "./components/Images3";
 
 import Shop from "./components/Shop";
@@ -44,6 +45,7 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path="/contactus" Component={Contactus} />
+          <Route path="/cart" Component={Cart} />
           <Route path="/shop" Component={Shop} />
           <Route path="/product" Component={Product_Sidebar} />
           <Route path="/allproduct" Component={AllProduct} />
