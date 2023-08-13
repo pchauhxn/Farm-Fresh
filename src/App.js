@@ -22,6 +22,8 @@ import Shop from "./components/Shop";
 import Product_Sidebar from "./components/Product/Product_Sidebar";
 import AllProduct from "./components/AllProduct";
 import Fruit from "./components/Fruit";
+import Vegetable from "./components/Vegetable";
+import Dairy from "./components/Dairy";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -44,7 +46,9 @@ function App() {
           <Route path="/shop" Component={Shop} />
           <Route path="/product" Component={Product_Sidebar} />
           <Route path="/allproduct" Component={AllProduct} />
+          <Route path="/vegetable" Component={Vegetable} />
           <Route path="/fruit" Component={Fruit} />
+          <Route path="/dairy" Component={Dairy} />
           </Routes>
         </div>
       </Router>

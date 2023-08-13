@@ -68,10 +68,12 @@ return (
       </div>
 
       <div className='category'>
+      <Link to="/dairy">
                        <button>
                         <img src={img5}></img>
                         <h2>Dairy</h2>
                        </button>
+                       </Link>
       </div>
 
       <div className='category'>

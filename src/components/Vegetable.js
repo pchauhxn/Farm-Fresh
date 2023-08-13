@@ -122,7 +122,7 @@ const Vegetable = () => {
     <Wrapper className="section">
      <CategorySidebar></CategorySidebar>
     <div className='allproducts'>
-    <h1>All Products</h1>
+    <h1>Vegetables</h1>
     <div className='products'>
         {
             products.map((item,index) => {
