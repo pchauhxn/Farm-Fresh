@@ -20,6 +20,7 @@ import Images3 from "./components/Images3";
 
 import Shop from "./components/Shop";
 import Product_Sidebar from "./components/Product/Product_Sidebar";
+import AllProduct from "./components/AllProduct";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -41,6 +42,7 @@ function App() {
           <Route path="/contactus" Component={Contactus} />
           <Route path="/shop" Component={Shop} />
           <Route path="/product" Component={Product_Sidebar} />
+          <Route path="/allproduct" Component={AllProduct} />
           </Routes>
         </div>
       </Router>

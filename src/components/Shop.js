@@ -6,8 +6,9 @@ const shop = () => {
   return (
     
       <div className='product_sidebar'>
-        <AllProduct></AllProduct>      
-        <CategorySidebar></CategorySidebar>
+             
+        
+        <AllProduct></AllProduct> 
     </div>
    
   )
