@@ -18,7 +18,6 @@ const Register = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
 
     async function submit(){
-      console.log("inside submit");
 
       try{
 
@@ -30,8 +29,8 @@ const Register = () => {
               if(res.data=="exist"){
                   alert("User already exists")
               }
-              else if(res.data=="notexist"){
-                  history("/Main",{state:{id:email}})
+              else {
+                  alert("registered successfully");
               }
           })
           .catch(e=>{
