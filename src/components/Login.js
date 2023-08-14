@@ -1,10 +1,42 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { useState } from 'react';
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
 const Login = () => {
+
+  const history= useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  async function submit(){
+
+    try{
+
+        await axios.post("http://localhost:8000/login",{
+            email,password
+        })
+        .then(res=>{
+            if(res.data==="exist"){
+              console.log("inside history");
+                history("/",{state:{id:email}})
+            }
+            else if(res.data==="notexist"){
+                alert("User have not sign up")
+            }
+        })
+        .catch(e=>{
+            alert("wrong details")
+            console.log(e);
+        })
+
+    }
+    catch(e){
+        console.log(e);
+
+    }
+
+}
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
@@ -26,10 +58,12 @@ const Login = () => {
 
       if (Object.keys(validationErrors).length === 0) {
           console.log('Form submitted:', email, password);
+          submit()
       } else {
           const errorMessage = Object.values(validationErrors).join('\n');
           alert(errorMessage);
       }
+
   };
   return (
     <Wrapper className="section">
@@ -47,7 +81,7 @@ const Login = () => {
                         <label>Password</label>
                     </div>
                     <div className="field">
-                        <input type="submit" value="Login"/>
+                        <input type="submit"  value="Login"/>
                     </div>
                     <div className="signup-link">
                         Not a member? 
@@ -151,7 +185,7 @@ img {
 background-repeat:no-repeat;
 background-size: "cover";
 
-}
+
 `;
 
 export default Login

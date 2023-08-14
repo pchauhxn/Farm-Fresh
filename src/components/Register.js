@@ -1,13 +1,50 @@
 import React from 'react'
 import styled from "styled-components";
-import { useState } from 'react';
+
+import { useEffect, useState } from "react"
+import axios from "axios"
+import { useNavigate, Link } from "react-router-dom"
+
+
 const Register = () => {
+
+    const history= useNavigate();
+
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+
+    async function submit(){
+      console.log("inside submit");
+
+      try{
+
+          await axios.post("http://localhost:8000/register",{
+              email,password
+          })
+          .then(res=>{
+            console.log(res);
+              if(res.data=="exist"){
+                  alert("User already exists")
+              }
+              else if(res.data=="notexist"){
+                  history("/Main",{state:{id:email}})
+              }
+          })
+          .catch(e=>{
+              alert("wrong details")
+              console.log(e);
+          })
+
+      }
+      catch(e){
+          console.log(e);
+
+      }
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -31,6 +68,7 @@ const Register = () => {
           return;
       }
         console.log('Form submitted:', firstName, lastName, email, password, phoneNumber);
+        submit();
     };
 
     const isValidEmail = (email) => {
@@ -185,7 +223,7 @@ img {
 background-repeat:no-repeat;
 background-size: "cover";
 
-}
+
 `;
 
 export default Register

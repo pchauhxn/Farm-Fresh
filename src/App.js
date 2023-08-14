@@ -27,12 +27,15 @@ import Vegetable from "./components/Vegetable";
 import Dairy from "./components/Dairy";
 import Exotic from "./components/Exotic";
 
+
+
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 2 },
 ];
+
 
 function App() {
   return (

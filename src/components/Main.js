@@ -3,8 +3,12 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 
+import {useLocation, useNavigate} from 'react-router-dom';
+
+
 
 const Main = () => {
+  const location=useLocation();
   return (
     <Wrapper className= "section">
     <div>
