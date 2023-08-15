@@ -5,7 +5,7 @@ import CategorySidebar from './CategorySidebar';
 const shop = () => {
   return (
     
-      <div className='product_sidebar'>
+      <div className='product_sidebar' >
              
         <AllProduct></AllProduct> 
     </div>

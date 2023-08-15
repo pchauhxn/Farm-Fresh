@@ -93,6 +93,7 @@ return (
 }
 
 const Wrapper = styled.section`
+
 .categorysidebar .category img {
   width: 40px;
   height: 40px;
@@ -113,7 +114,7 @@ const Wrapper = styled.section`
   align-items: center;
   border: 1px solid #e7e7e7;
   padding: 10px 20px;
-
+  background-color: #d2ebc9;
   padding-bottom: 180px;
   flex-wrap: wrap;
   gap: 10px;

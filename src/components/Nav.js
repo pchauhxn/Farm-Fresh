@@ -6,13 +6,28 @@ import Login from "./Login"
 import Register from "./Register"
 import Product_Sidebar from './Product/Product_Sidebar';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-const Nav = () => {
+import { useEffect, useState } from "react";
 
+const Nav = () => {
+  const [stickyClass, setStickyClass] = useState('');
+
+  useEffect(() => {
+    window.addEventListener('scroll', stickNavbar);
+    return () => window.removeEventListener('scroll', stickNavbar);
+  }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      // window height changed for the demo
+      windowHeight > 150 ? setStickyClass('sticky-nav') : setStickyClass('');
+    }
+  };
 
   return (
 
     <Wrapper className="section">
-      <nav class="navbar navbar-expand-lg navbar-light ">
+      <nav className={`navbar navbar-expand-lg navbar-light${stickyClass}`}>
         <Link to="/">
           <a id="black" class="navbar-brand" href="homepage.html" style={{color : 'white'}}><span class="material-symbols-outlined" style={{color : 'white'}} >
             agriculture
@@ -76,9 +91,12 @@ const Nav = () => {
 
 const Wrapper = styled.section`
 
+
+
 nav{
   background-color: #446e35;
   color:white;
+ 
 }
 
  #cart{
@@ -115,6 +133,21 @@ nav{
 #btn-navbar a{
     color: white;
     text-decoration: none;
+}
+
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  position: relative;
+  z-index: 999;
+  height: 62px;
+  width: 100%;
+ 
 }
   
 

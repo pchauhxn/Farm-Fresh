@@ -148,6 +148,7 @@ const Exotic = () => {
 
 
 const Wrapper = styled.section`
+background-color: #f0f8f4;
 .allproducts{
   display: flex;
   flex-direction: column;

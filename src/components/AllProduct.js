@@ -145,10 +145,17 @@ const AllProduct = () => {
 
 
 const Wrapper = styled.section`
+
+
+style={{backgroundColor: "#a7c0b3"}}
+
+background-color: #f0f8f4;
+
 .allproducts{
   display: flex;
   flex-direction: column;
   width: 78%;
+  
  
 }
 
