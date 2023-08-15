@@ -31,13 +31,7 @@ const Main = () => {
     </section>
     <p id="para">Our Organic Products</p>
 
-    <div id="allbtn">
-        <button type="button" class="btn btn-success">All</button>
-        <button type="button" class="btn btn-success-light" id="btns1">Vegetables</button>
-        <button type="button" class="btn btn-success-light" id="btns">Fruits</button>
-        <button type="button" class="btn btn-success-light" id="btns">Bread</button>
-        <button type="button" class="btn btn-success-light" id="btns">Paneer</button>
-    </div>
+    
     
 
     <section className="vegetables-section">
