@@ -14,7 +14,7 @@ const Main = () => {
         
         <div className="grid-item">
           <img src="https://grocery-store-react.netlify.app/image/feature-img-2.png" alt="Mango"/>
-          <h2>Free Delivery</h2>
+          <h2>Fast Delivery</h2>
           
         </div>
         <div className="grid-item">

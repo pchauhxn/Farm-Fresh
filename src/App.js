@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import image from './image/carousel.gif';
 import image2 from './image/carousel2.gif';
 import image3 from './image/carousel3.gif';
+import Cart from "./components/Cart";
 import Images3 from "./components/Images3";
 
 import Shop from "./components/Shop";
@@ -26,12 +27,15 @@ import Vegetable from "./components/Vegetable";
 import Dairy from "./components/Dairy";
 import Exotic from "./components/Exotic";
 
+
+
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 2 },
 ];
+
 
 function App() {
   return (
@@ -44,6 +48,7 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path="/contactus" Component={Contactus} />
+          <Route path="/cart" Component={Cart} />
           <Route path="/shop" Component={Shop} />
           <Route path="/product" Component={Product_Sidebar} />
           <Route path="/allproduct" Component={AllProduct} />

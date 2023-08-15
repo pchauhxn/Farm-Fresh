@@ -1,7 +1,52 @@
 import React from 'react'
 import styled from "styled-components";
+import { useState } from 'react';
 
 const ProductCard = ({data}) => {
+    const [count, setCount] = useState(1)
+
+
+  const addtocart = () => {
+    let cart = JSON.parse(localStorage.getItem('cart'))
+    let productdata = data
+    if (cart) {
+      let itemincart = cart.find(item => item.productdata.id === productdata.id)
+      if (itemincart) {
+        cart = cart.map(item => {
+          if (item.productdata.id === productdata.id) {
+            return {
+              ...item,
+              quantity: item.quantity + count
+            }
+          }
+          else {
+            return item
+          }
+        })
+        localStorage.setItem('cart', JSON.stringify(cart))
+      }
+      else {
+        cart = [
+          ...cart,
+          {
+            productdata,
+            quantity: count
+          }
+        ]
+        localStorage.setItem('cart', JSON.stringify(cart))
+      }
+    }
+    else {
+      cart = [{
+        productdata,
+        quantity: count
+      }]
+
+      localStorage.setItem('cart', JSON.stringify(cart))
+    }
+    window.location.reload()
+
+  }
   return (
     <Wrapper className="section">
     <div className='product'>
@@ -27,7 +72,9 @@ const ProductCard = ({data}) => {
         <p>{data.counttype}</p>
       </div>
 
-      <div className="addbtn">
+      <div className="addbtn" onClick={() => {
+                addtocart()
+              }}>
      
         <span class="material-symbols-outlined">
       add_shopping_cart
