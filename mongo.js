@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-
-// Connect to MongoDB using Mongoose
 mongoose.connect("mongodb+srv://singhalrakshit0824:rakshit0824@cluster0.tkhkpoc.mongodb.net/?retryWrites=true", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
