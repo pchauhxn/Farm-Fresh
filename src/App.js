@@ -26,6 +26,7 @@ import Fruit from "./components/Fruit";
 import Vegetable from "./components/Vegetable";
 import Dairy from "./components/Dairy";
 import Exotic from "./components/Exotic";
+import PredictionForm from "./components/PredictionForm";
 
 
 
@@ -68,7 +69,7 @@ const DefaultComponents = () => {
   return (
     <div>
       <About />
-      
+      <PredictionForm/>
       <Carousel breakPoints={breakPoints} style={{backgroundColor:'rgb(209, 224, 219)'}}>
       <Item icon={image}></Item>
       <Item icon={image2}></Item>
