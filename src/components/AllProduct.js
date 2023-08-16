@@ -147,7 +147,7 @@ const AllProduct = () => {
 const Wrapper = styled.section`
 
 
-style={{backgroundColor: "#a7c0b3"}}
+style{background-color: #a7c0b3}
 
 background-color: #f0f8f4;
 
