@@ -69,8 +69,8 @@ const DefaultComponents = () => {
   return (
     <div>
       <About />
-      <PredictionForm/>
-      <Carousel breakPoints={breakPoints} style={{backgroundColor:'rgb(209, 224, 219)'}}>
+      {/* <PredictionForm/> */}
+      <Carousel breakPoints={breakPoints} style={{backgroundColor:'#d2e3ea'}}>
       <Item icon={image}></Item>
       <Item icon={image2}></Item>
       <Item icon={image3}></Item>

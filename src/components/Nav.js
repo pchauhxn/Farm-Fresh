@@ -151,7 +151,7 @@ nav{
 .navbar {
   position: relative;
   z-index: 999;
-  height: 62px;
+  height: 80px;
   width: 100%;
  
 }
