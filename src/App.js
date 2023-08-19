@@ -57,6 +57,7 @@ function App() {
           <Route path="/fruit" Component={Fruit} />
           <Route path="/dairy" Component={Dairy} />
           <Route path="/exotic" Component={Exotic} />
+          <Route path="/predict" Component={PredictionForm} />
           </Routes>
         </div>
       </Router>

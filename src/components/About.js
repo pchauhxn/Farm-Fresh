@@ -19,7 +19,10 @@ const About = () => {
                     Eat farm-fresh veggies&Foods that have extraordinary flavours<br/> to make your life healthier for today and in future. </p>
              <NavLink to="/shop">
                 <button className='shop'style={{borderRadius:'5%'}}>SHOP NOW</button>
-             </NavLink>
+                </NavLink>
+                <NavLink to="/predict">
+                <button className='shop'style={{borderRadius:'5%' , marginLeft:'25px'}}>PREDICT PRICE</button>
+                </NavLink>
             </div>
             <div className="hero-section-image">
         

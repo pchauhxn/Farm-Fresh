@@ -104,6 +104,21 @@ nav{
   color:white;
  
 }
+#navbarSupportedContent
+{
+  opacity: 0.8;
+  color: white;
+  background: linear-gradient(-135deg, #02201c, #125212);
+  
+}
+#navbarSupportedContent ul li a{
+  outline:none;
+  text-decoration:none;
+}
+
+#navbarSupportedContent ul li a :hover{
+  background-color:  #6e8e63;
+}
 
  #cart{
   margin-left:15px;
@@ -164,6 +179,8 @@ nav{
   line-height: inherit;
   white-space: nowrap;
 }
+
+ 
 `
 
 export default Nav
