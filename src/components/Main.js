@@ -128,6 +128,7 @@ body {
 main {
   flex: 1;
   padding: 2rem;
+  background-color: #d2e3ea;
 }
 
 /* Improved styling for the main section */
@@ -142,6 +143,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  
 }
 
 .grid-item {
@@ -171,7 +173,7 @@ main {
 }
 
 footer {
-  background-color: #2a4e1e;
+  background: linear-gradient(-135deg, #02201c, #125212);
   color: #fff;
   text-align: center;
   padding: 1rem;

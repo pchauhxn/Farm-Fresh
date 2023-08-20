@@ -129,13 +129,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-
-  
 }
 
 main {
   flex: 1;
   padding: 2rem;
+  background-color: #d2e3ea;
+
 }
 
 /* Improved styling for the main section */

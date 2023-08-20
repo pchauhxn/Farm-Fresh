@@ -30,9 +30,14 @@ const Nav = () => {
     <Wrapper className="section">
       <nav className={`navbar navbar-expand-lg navbar-light${stickyClass}`}>
         <Link to="/">
-          <a id="black" class="navbar-brand" href="homepage.html" style={{color : 'white'}}><span class="material-symbols-outlined" style={{color : 'white'}} >
+          <a id="black" class="navbar-brand" href="homepage.html" style={{color : 'white'}}>
+            <span class="material-symbols-outlined" style={{color : 'white', fontSize: '45px'}} >
             agriculture
-          </span>FarmFresh</a>
+          </span></a>
+        </Link>
+        <Link to="/">
+          <a id="black" class="navbar-brand" href="homepage.html" style={{color : 'white'}}><span class="material-symbols-outlined" style={{color : 'white'}} ></span>
+          FarmFresh</a>
         </Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -95,9 +100,24 @@ const Wrapper = styled.section`
 
 
 nav{
-  background-color: #446e35;
+  background: linear-gradient(-135deg, #02201c, #125212);
   color:white;
  
+}
+#navbarSupportedContent
+{
+  opacity: 0.8;
+  color: white;
+  background: linear-gradient(-135deg, #02201c, #125212);
+  
+}
+#navbarSupportedContent ul li a{
+  outline:none;
+  text-decoration:none;
+}
+
+#navbarSupportedContent ul li a :hover{
+  background-color:  #6e8e63;
 }
 
  #cart{
@@ -146,12 +166,21 @@ nav{
 .navbar {
   position: relative;
   z-index: 999;
-  height: 62px;
+  height: 80px;
   width: 100%;
  
 }
-  
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
 
+ 
 `
 
 export default Nav
