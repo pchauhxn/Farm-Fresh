@@ -105,7 +105,7 @@ background-image:
 background-repeat:no-repeat;
 background-size: "cover";
 
-}
+
 
 button {
   padding: 10px 25px;
@@ -143,7 +143,3 @@ button:hover{
 `;
 
 export default About
-/*
- <figure>
-            <img src="images\healthy-vegetables.jpg" alt="hero-section-photo" className="img-style"/>
-         </figure>  */
