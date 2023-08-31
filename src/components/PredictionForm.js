@@ -68,11 +68,14 @@ const PredictionForm = () => {
 
   return (
     <Wrapper className='section'>
-    <div>
+      <div>
+      <img id="plot" src={img1} alt="Python Plot" />
+      </div>
+    <div className='abc'>
     
       <form onSubmit={handleSubmit} id="getp">
 
-      <img id="plot" src={img1} alt="Python Plot" />
+      
 
         <input
           type="text"
@@ -81,15 +84,16 @@ const PredictionForm = () => {
         />
         
         <button type="submit">Get Prediction</button>
-      </form>
-
-      
-      
-      {foundItem ? (
+        {foundItem ? (
              <div id="getp">Predicted Price : Rs {foundItem.Predicted}</div>
       ) : (
         <div id="getp">No item found for the input value</div>
       )}
+      </form>
+
+      
+      
+      
     </div>
     </Wrapper>
   );
@@ -109,11 +113,10 @@ body { font-family: sans-serif; }
 
 
 padding: 12rem 0;
-img {
-  width: 40rem;
-   height: 15rem;
-   margin-top:-270px;
-   margin-left:190px;
+img {        width: 54rem;
+  height: 22rem;
+  margin-top: -173px;
+  margin-left: 127px;
  }
  
 .img-style {
