@@ -1,6 +1,6 @@
 const express = require('express');
    const app = express();
-   const model = require('C:\Users\Piyush\Desktop\Git Uploads\Farm-Fresh\public\model.sav'); // Import your LSTM model
+   const model = require('public/model.sav'); // Import your LSTM model
 
    app.use(express.json());
 
@@ -10,7 +10,7 @@ const express = require('express');
      res.json({ prediction });
    });
 
-   const PORT = process.env.PORT || 3001;
+   const PORT = process.env.PORT || 3000;
    app.listen(PORT, () => {
      console.log(`Server is running on port ${PORT}`);
    });

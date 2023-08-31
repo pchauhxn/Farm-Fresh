@@ -81,7 +81,7 @@ const ProductCard = ({data}) => {
       </span>
       
       </div>
-      <button className='prediction'>Predict Price</button>
+     
 
     </div>
     </Wrapper>

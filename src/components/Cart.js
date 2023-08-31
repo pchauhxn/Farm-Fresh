@@ -7,6 +7,7 @@ import './ShippingContainer.css'
 import './PaymentContainer.css'
 import './OrderSucessfull.css'
 
+
 const Cart = () => {
   const [cartdata, setcartdata] = React.useState([])
   const [subtotal, setsubtotal] = React.useState(0)
@@ -216,7 +217,7 @@ const Cart = () => {
                                   window.location.href = `/product/${item.productdata.productid}`
                                 }}
                               >
-                                <img src={item.productdata.productimage.image}
+                                <img src={item.productdata.productimage}
                                   alt={item.productdata.productname} />
                                 <p>{
                                   item.productdata.productname
@@ -255,11 +256,11 @@ const Cart = () => {
                               data-label="Price"
                             >
                               <p>
-                                $ {item.productdata.productprice ? item.productdata.productprice.toFixed(2) : 0.00}
+                                Rs {item.productdata.productprice ? item.productdata.productprice.toFixed(2) : 0.00}
                               </p>
                             </td>
                             <td>
-                              <p>$ {
+                              <p>Rs {
                                 (item.productdata.productprice * item.quantity).toFixed(2)
                               }</p>
                             </td>
@@ -286,7 +287,7 @@ const Cart = () => {
                       <td></td>
                       <td className='totaltableleft'>Sub-Total</td>
                       <td className='totaltableright'>
-                        $ {subtotal.toFixed(2)}
+                        Rs {subtotal.toFixed(2)}
                       </td>
                     </tr>
                     <tr>
@@ -294,7 +295,7 @@ const Cart = () => {
                       <td></td>
                       <td className='totaltableleft'>Shipping</td>
                       <td className='totaltableright'>
-                        $ {shipping.toFixed(2)}
+                        Rs {shipping.toFixed(2)}
                       </td>
                     </tr>
                     <tr>
@@ -302,7 +303,7 @@ const Cart = () => {
                       <td></td>
                       <td className='totaltableleft'>Total</td>
                       <td className='totaltableright'>
-                        $ {(subtotal + shipping).toFixed(2)}
+                        Rs {(subtotal + shipping).toFixed(2)}
                       </td>
                     </tr>
                     <tr>
@@ -310,7 +311,7 @@ const Cart = () => {
                       <td></td>
                       <td className='totaltableleft'>Tax</td>
                       <td className='totaltableright'>
-                        $ {tax.toFixed(2)}
+                        Rs {tax.toFixed(2)}
                       </td>
                     </tr>
                     <tr>
@@ -318,7 +319,7 @@ const Cart = () => {
                       <td></td>
                       <td className='totaltableleft'>Net-Total</td>
                       <td className='totaltableright'>
-                        $ {(tax + subtotal + shipping).toFixed(2)}
+                        Rs {(tax + subtotal + shipping).toFixed(2)}
                       </td>
                     </tr>
                   </tbody>
@@ -371,14 +372,14 @@ const Cart = () => {
               </div>
               <div className='c1'>
                 <input type='radio' name='payment' id='payment1' />
-                <img src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png'
-                  alt='paypal'
+                <img src='https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png'
+                  alt='phonepe'
                 />
               </div>
               <div className='c1'>
                 <input type='radio' name='payment' id='payment1' />
-                <img src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png'
-                  alt='paypal'
+                <img src='https://download.logo.wine/logo/Google_Pay/Google_Pay-Logo.wine.png'
+                  alt='gpay'
                 />
               </div>
             </div>
@@ -393,7 +394,7 @@ const Cart = () => {
             <div className='c2'>
               <span>Net Total</span>
               &nbsp;&nbsp;
-              <span>$ {(subtotal + tax + shipping).toFixed(2)}</span>
+              <span>Rs {(subtotal + tax + shipping).toFixed(2)}</span>
             </div>
           </div>
         }
