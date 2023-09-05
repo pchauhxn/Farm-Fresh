@@ -65,6 +65,11 @@ console.log(data);
 
 })
 
+app.post("/placeorder",(req,res)=>{
+    const {order_id,}
+})
+
+
 app.listen(8000,()=>{
     console.log("port connected");
 })
