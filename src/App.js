@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contactus from "./components/Contactus";
 import Carousel from "react-elastic-carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BarPred from "./components/BarPred"
 
 
 import image from './image/carousel.gif';
