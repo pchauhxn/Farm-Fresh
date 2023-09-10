@@ -166,13 +166,34 @@ plt.show()
 
 """input check"""
 
-inp = pd.read_csv('new.csv')
+# inp = pd.read_csv('new.csv')
 
-veg  = inp['Vegetable']
+# veg  = inp['Vegetable']
 
-inpt = preprocess_inp(inp)
+# inpt = preprocess_inp(inp)
 
-predicted_price = model.predict(inpt)
+# predicted_price = model.predict(inpt)
 
-for i in range (0,15):
-    print("For : ",veg[i] ," - " ,"Predicted Price :", predicted_price[i][0])
+# for i in range (0,15):
+#     print("For : ",veg[i] ," - " ,"Predicted Price :", predicted_price[i][0])
+
+@app.route('/pota', methods=['POST','GET'])
+def predict0():
+    #variables
+    
+    inp = pd.read_csv('new.csv')
+
+    veg  = inp['Vegetable']
+
+    inpt = preprocess_inp(inp)
+
+    predicted_price = model.predict(inpt)
+    # result = model.predict([[[0],[31],[26],[0],[0],[0]]])
+    output = 'The price of Potato in Agartala will be Rs. ' + \
+        str(int(result[0][0])) + ' in future.'
+    return {"output":output}
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
