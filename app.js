@@ -65,9 +65,9 @@ console.log(data);
 
 })
 
-app.post("/placeorder",(req,res)=>{
-    const {order_id,}
-})
+// app.post("/placeorder",(req,res)=>{
+//     const {order_id,}
+// })
 
 
 app.listen(8000,()=>{
