@@ -13,7 +13,7 @@ const Login = () => {
 
     try{
 
-        await axios.post("http://localhost:8000/login",{
+        await axios.post("http://localhost:8080/login",{
             email,password
         })
         .then(res=>{

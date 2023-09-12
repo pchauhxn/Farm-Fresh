@@ -21,7 +21,7 @@ const Register = () => {
 
       try{
 
-          await axios.post("http://localhost:8000/register",{
+          await axios.post("http://localhost:8080/register",{
               email,password
           })
           .then(res=>{

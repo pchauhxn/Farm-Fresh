@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contactus from "./components/Contactus";
 import Carousel from "react-elastic-carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BarPred from "./components/BarPred"
 
 
 import image from './image/carousel.gif';
@@ -44,21 +43,21 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          <Nav/>  
+          <Nav />
           <Routes>
-          <Route path="/" element={<DefaultComponents />} />
-          <Route path="/login" Component={Login} />
-          <Route path="/register" Component={Register} />
-          <Route path="/contactus" Component={Contactus} />
-          <Route path="/cart" Component={Cart} />
-          <Route path="/shop" Component={Shop} />
-          <Route path="/product" Component={Product_Sidebar} />
-          <Route path="/allproduct" Component={AllProduct} />
-          <Route path="/vegetable" Component={Vegetable} />
-          <Route path="/fruit" Component={Fruit} />
-          <Route path="/dairy" Component={Dairy} />
-          <Route path="/exotic" Component={Exotic} />
-          <Route path="/predict" Component={PredictionForm} />
+            <Route path="/" element={<DefaultComponents />} />
+            <Route path="/login" Component={Login} />
+            <Route path="/register" Component={Register} />
+            <Route path="/contactus" Component={Contactus} />
+            <Route path="/cart" Component={Cart} />
+            <Route path="/shop" Component={Shop} />
+            <Route path="/product" Component={Product_Sidebar} />
+            <Route path="/allproduct" Component={AllProduct} />
+            <Route path="/vegetable" Component={Vegetable} />
+            <Route path="/fruit" Component={Fruit} />
+            <Route path="/dairy" Component={Dairy} />
+            <Route path="/exotic" Component={Exotic} />
+            <Route path="/predict" Component={PredictionForm} />
           </Routes>
         </div>
       </Router>
@@ -72,12 +71,12 @@ const DefaultComponents = () => {
     <div>
       <About />
       {/* <PredictionForm/> */}
-      <Carousel breakPoints={breakPoints} style={{backgroundColor:'#d2e3ea'}}>
-      <Item icon={image}></Item>
-      <Item icon={image2}></Item>
-      <Item icon={image3}></Item>
-        </Carousel>
-        <Images3></Images3>
+      <Carousel breakPoints={breakPoints} style={{ backgroundColor: '#d2e3ea' }}>
+        <Item icon={image}></Item>
+        <Item icon={image2}></Item>
+        <Item icon={image3}></Item>
+      </Carousel>
+      <Images3></Images3>
       <Main />
     </div>
   );

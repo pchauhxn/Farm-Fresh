@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-
+import axios from "axios";
 import './Cart.css'
 import './Progress.css'
 import './CartContainer.css'
 import './ShippingContainer.css'
 import './PaymentContainer.css'
 import './OrderSucessfull.css'
+import RazorpayPaymentBtn from './CartComponents/RazorpayPaymentBtn';
 
 
 const Cart = () => {
+  const [rzOrder, setRzOrder] = useState();
   const [cartdata, setcartdata] = React.useState([])
   const [subtotal, setsubtotal] = React.useState(0)
   const [shipping, setshipping] = React.useState(0)
@@ -17,7 +19,24 @@ const Cart = () => {
   const [deliverydate, setdeliverydate] = React.useState(
     new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
   )
-
+  const createOrder = async () => {
+    if (checklogin() && cartdata.length > 0) {
+      try {
+        const resp = await axios.post(`http://localhost:8080/placeorder`, {
+          amount: (subtotal + tax + shipping).toFixed(2),
+          userId: `64f8c4975a7e75d2b24a2f2e`,
+        })
+        console.log(resp.data.rz_order);
+        if (resp.status === 201) {
+          setRzOrder(resp.data.rz_order);
+        }
+      }
+      catch (error) {
+        console.log(error);
+      }
+    }
+    setactive(2)
+  }
   const getcartitemsfromlocalstorage = () => {
     let cart = JSON.parse(localStorage.getItem('cart'))
     if (cart) {
@@ -54,7 +73,7 @@ const Cart = () => {
     localStorage.setItem('cart', JSON.stringify(temp))
     getcartitemsfromlocalstorage()
   }
-  
+
   React.useEffect(() => {
     getcartitemsfromlocalstorage()
   }, [])
@@ -74,12 +93,12 @@ const Cart = () => {
     }
   ]
 
- 
+
   return (
     <div>
       <div className='cart'>
         <div className="progress">
-        {
+          {
             active == 1 ?
               <div className='c11'
                 onClick={() => {
@@ -195,9 +214,9 @@ const Cart = () => {
           active == 1 &&
           <div className='cartcont'>
             {
-              cartdata.length>0 ?
-              <table className='carttable'>
-                <thead>
+              cartdata.length > 0 ?
+                <table className='carttable'>
+                  <thead>
                     <tr>
                       <th>Product</th>
                       <th>Quantity</th>
@@ -209,10 +228,10 @@ const Cart = () => {
                   <tbody>
                     {
                       cartdata.map((item, index) => {
-                        return(
+                        return (
                           <tr key={index} className="cartitemrow">
                             <td data-label="Product">
-                            <div className='cartproduct'
+                              <div className='cartproduct'
                                 onClick={() => {
                                   window.location.href = `/product/${item.productdata.productid}`
                                 }}
@@ -283,7 +302,7 @@ const Cart = () => {
                       })
                     }
                     <tr>
-                    <td></td>
+                      <td></td>
                       <td></td>
                       <td className='totaltableleft'>Sub-Total</td>
                       <td className='totaltableright'>
@@ -323,9 +342,9 @@ const Cart = () => {
                       </td>
                     </tr>
                   </tbody>
-              </table>
-              :
-              <div className='emptycart'>
+                </table>
+                :
+                <div className='emptycart'>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                   </svg>
@@ -349,7 +368,7 @@ const Cart = () => {
                 }}
               />
             </div>
-            
+
             <div className='shippingadd'>
               <input type='text' placeholder='Address Line 1' />
               <input type='text' placeholder='Address Line 2' />
@@ -415,9 +434,7 @@ const Cart = () => {
           active == 1 && cartdata.length > 0 &&
           <div className='btns'>
             <button className='nextbtn'
-              onClick={() => {
-                checklogin() && setactive(2)
-              }}
+              onClick={createOrder}
             >Next</button>
           </div>
         }
@@ -430,11 +447,14 @@ const Cart = () => {
                 checklogin() && setactive(1)
               }}
             >Back</button>
-            <button className='nextbtn'
+            {/* <button className='nextbtn'
               onClick={() => {
                 checklogin() && setactive(3)
               }}
-            >Next</button>
+            >Next</button> */}{
+              rzOrder &&
+              <RazorpayPaymentBtn orderId={rzOrder.id} amount={rzOrder.amount} setactive/>
+            }
           </div>
         }
 
@@ -465,7 +485,7 @@ const Cart = () => {
         }
       </div>
     </div>
-      )
+  )
 }
 
-      export default Cart
+export default Cart
