@@ -109,6 +109,7 @@ const PredictionForm = () => {
   };
 
   return (
+    
     <Wrapper className="section">
       <div className="form-container">
         <img src={img1} alt="Python Plot" />
