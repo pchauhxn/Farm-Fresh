@@ -18,7 +18,7 @@ const Wrapper = styled.section`
 
   img {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1010px;
     height: auto;
     margin-bottom: 1rem;
   }
