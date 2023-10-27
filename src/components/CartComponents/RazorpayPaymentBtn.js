@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 
-export default function RazorpayPaymentBtn({id,amount,setactive}) {
+export default function RazorpayPaymentBtn({id,amount}) {
     useEffect(() => {
         const options = {
-          key: 'rzp_test_D2Fi6AOhGDd08H', // Enter the Key ID generated from the Dashboard
+          key: 'rzp_test_3VhFJzygakGkMD', // Enter the Key ID generated from the Dashboard
           amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
           currency: 'INR',
           name: 'Farm Fresh',
@@ -48,8 +48,7 @@ export default function RazorpayPaymentBtn({id,amount,setactive}) {
     
   return (
     <div>
-      <p>uiyisdhu</p>
-      <button id="rzp-button1">Pay wkjjhluijkith Razorpay</button>
+      <button >Pay Razorpay</button>
     </div>
   )
 }

@@ -26,9 +26,9 @@ const Cart = () => {
           amount: (subtotal + tax + shipping).toFixed(2),
           userId: `64f8c4975a7e75d2b24a2f2e`,
         })
-        console.log(resp.data.rz_order);
+        console.log(resp.data.rzOrder);
         if (resp.status === 201) {
-          setRzOrder(resp.data.rz_order);
+          setRzOrder(resp.data.rzOrder);
         }
       }
       catch (error) {
@@ -447,11 +447,12 @@ const Cart = () => {
                 checklogin() && setactive(1)
               }}
             >Back</button>
-            {/* <button className='nextbtn'
+            <button className='nextbtn'
               onClick={() => {
                 checklogin() && setactive(3)
               }}
-            >Next</button> */}{
+            >Next</button>
+            {
               rzOrder &&
               <RazorpayPaymentBtn orderId={rzOrder.id} amount={rzOrder.amount}/>
             }

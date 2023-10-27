@@ -16,7 +16,8 @@ app.use(cors());
 // Function to connect to MongoDB
 async function connectToMongo() {
   try {
-    await mongoose.connect(process.env.DB_URL, {
+    uri='mongodb+srv://pchauhan7289:x1RwE1uGU2shQeVT@cluster0.sj8faxl.mongodb.net/?retryWrites=true&w=majority'
+    await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -29,8 +30,8 @@ connectToMongo();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 var instance = new Razorpay({
-  key_id: 'rzp_test_D2Fi6AOhGDd08H',
-  key_secret: 'WAnHPzzhj2DvxrwbEWjweUTd',
+  key_id: 'rzp_test_3VhFJzygakGkMD',
+  key_secret: 'Z8gjPAMbqdUQiHs2vSzQnw5g',
 });
 
 app.post('/placeorder', async (req, res) => {
@@ -131,6 +132,6 @@ app.post("/register", async (req, res) => {
 });
 
 
-app.listen(process.env.PORT, () => {
-  console.log("port connected to " + process.env.PORT);
+app.listen(8000, () => {
+  console.log("port connected to " + 8000);
 })
